@@ -1,0 +1,27 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon_128_test.png",
+         "16": "icon_16_test.png",
+         "48": "icon_48_test.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [
+        {
+            "match_about_blank": true,
+            "matches": ["<all_urls>"],
+            "js": ["copypaste.js"]
+        }
+    ],
+   "description": "Adjust copied text before pasting it",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArWCcYQ4b/LeRrkhEgDuv1fsmqpJPTn0RAurzFOaHzNqmu1/Ajcx1bbe2ksUvKs9STPDhr2f+G6ihWUvjxtn4eQr398UEaX4xOt0MEaWdRh6SXEZhgKxQQIUo3nw3A3jL8+CFujaqigVempvkbnq8D87UfxyVNjLgIO9/W0yZLLIfN1yLiyB8Y4PXfKAyohC/rlbNjHreom8xXaYirG3gpqtko14qISWgJgUGtiI87ePlS7+BhKXNfk9S/lLZC7Zotyt/ZP9roEPFyZ63x9RKzTnHdTSWLZNGKg2lW0yiaAzXpHJ3or/YKvRIfuOEsr2gMqRP16hxuc8YtplWZR6dWwIDAQAB",
+   "manifest_version": 3,
+   "name": "Fix Latin Copy Paste",
+   "permissions": [ "storage", "activeTab", "scripting"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}
